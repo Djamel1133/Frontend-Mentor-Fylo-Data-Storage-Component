@@ -1,0 +1,189 @@
+/* ==========================
+   Root Variables for Colors, Font Sizes, and Weights
+========================== */
+/* Primary colors */
+ $Gradient: hsl(6, 100%, 80%) to hsl(335, 100%, 65%) ;
+/* Neutral */
+$Pale-Blue: hsl(243, 100%, 93%) ;
+$Grayish-Blue: hsl(229, 7%, 55%) ;
+$Dark-Blue: hsl(228, 56%, 26%) ;
+$Very-Dark-Blue: hsl(229, 57%, 11%) ;
+$white: white ;
+
+/* font weight */
+$fw-small: 400;
+$fw-medium: 500;
+$fw-large: 700;
+
+/* font size */
+$fs-smaller:.75rem ; /* 12px */
+$fs-small:   .875rem ; /*14px */
+$fs-medium:  1rem; 
+$fs-large:   1.125rem;
+$fs-x-large: 2.250rem; 
+
+/* ==========================
+   Global Reset and Base Styles
+========================== */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Raleway", sans-serif;
+  font-size: $fs-small;
+  font-weight: $fs-small;
+  text-align: center;
+  background-image: url(images/bg-mobile.png);
+  }  
+
+.main-container {
+  display: grid;
+  place-content: center;
+  row-gap: 1rem;
+  width: 100vw;
+  height: 100vh;
+  background-image: url(images/bg-mobile.png);
+  background-size: cover;
+  background-repeat: no-repeat;  
+  color: $Pale-Blue;
+
+ .header {
+  padding: 2rem ;
+  background-color: $Dark-Blue ;
+  border-radius: 10px 125px 10px 10px;
+  
+  .header-logo{
+   margin: 1rem;
+   display: block;
+   margin-left: 0;
+  }
+
+  .icon-container{
+    display: block;
+    width: fit-content;
+    img, svg {
+    width: 2.85rem;
+    height: 2.9rem;
+    object-fit: contain;
+    padding: 0.7rem 0.5rem;
+
+    margin: 1rem 0.5rem 0 0;
+    border-radius: 10px;
+   
+    background-color: $Very-Dark-Blue;
+        }
+    }
+  }
+
+  .storage-info{
+    padding: 2rem 3rem 2rem 3rem;
+    background-color: $Dark-Blue ;
+    border-radius: 10px ;
+    position: relative;
+    
+    .progress-container{
+      border-radius: 5px;
+      background-color: $Very-Dark-Blue;
+      position: relative;
+      .progress-bar{
+      border-radius: inherit;
+      margin: 1rem 0;
+      height: 12px;
+      width: 80%;
+      background-image: linear-gradient(to right ,
+      hsl(6, 100%, 80%) ,hsl(335, 100%, 65%)) ; 
+      }
+
+      .progress-indicator{
+       border-radius: 50%;
+       height: 12px;
+       width: 10px;
+       background-color: $white;
+       position: absolute;
+       top:0 ;
+       left: 75%;
+      }
+    }
+
+    .storage-range {
+     display: flex;
+     justify-content: space-between;
+     margin-bottom: 1.5rem;
+    }
+
+    .remaining-storage {
+      background-color: $white ;
+      border-radius: 10px ;
+      display: flex;
+      align-items: center; 
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      padding: 1rem 1.2rem;
+      p{
+       color: $Grayish-Blue ;
+       font-size: $fs-smaller;
+       font-weight: $fw-large;
+       text-transform: uppercase;
+       white-space: nowrap ;
+      }
+
+      strong {
+        font-size: $fs-x-large;
+        font-weight: $fw-large;
+        color: $Very-Dark-Blue;
+        margin-right: 0.5rem;
+      }
+      
+    }
+  }
+}
+
+/* styling references in footer */
+.attribution { 
+  font-size: 11px; text-align: center; 
+  a { 
+    color: hsl(228, 45%, 44%); }
+}
+
+@media (min-width: 56rem) {
+  .main-container {
+    grid-template-columns: auto auto;
+    column-gap: 1rem;
+   .header {
+    padding: 2rem 9rem 2rem 2.5rem ;
+    }
+   .storage-info {
+    margin-top: auto;
+   
+    height: 9rem ;
+    width: 32rem ; 
+
+    .remaining-storage {
+      top: -10%;
+      left: 75%;
+      transform: translate(-50%, -50%);
+      border-radius: 10px 10px 0 10px;
+    .triangle {
+      width: 0;
+      height: 0;
+      border-left: 30px solid transparent; /* Transparent left border */
+      border-bottom: 30px solid transparent; /* Transparent right border */
+      border-right: 30px solid $white; /* Color and size of the triangle */
+      position: absolute;
+      top:100% ;
+     right: 0;
+    }
+  }
+    .progress-container {
+      .progress-indicator{
+       left: 77.2%;
+       }
+    }
+  }
+  }
+}

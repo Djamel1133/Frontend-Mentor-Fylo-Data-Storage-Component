@@ -1,0 +1,162 @@
+/* ==========================
+   Root Variables for Colors, Font Sizes, and Weights
+========================== */
+/* Primary colors */
+/* Neutral */
+/* font weight */
+/* font size */
+/* 12px */
+/*14px */
+/* ==========================
+   Global Reset and Base Styles
+========================== */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Raleway", sans-serif;
+  font-size: 0.875rem;
+  font-weight: 0.875rem;
+  text-align: center;
+  background-image: url(images/bg-mobile.png);
+}
+
+.main-container {
+  display: grid;
+  place-content: center;
+  row-gap: 1rem;
+  width: 100vw;
+  height: 100vh;
+  background-image: url(images/bg-mobile.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: hsl(243, 100%, 93%);
+}
+.main-container .header {
+  padding: 2rem;
+  background-color: hsl(228, 56%, 26%);
+  border-radius: 10px 125px 10px 10px;
+}
+.main-container .header .header-logo {
+  margin: 1rem;
+  display: block;
+  margin-left: 0;
+}
+.main-container .header .icon-container {
+  display: block;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.main-container .header .icon-container img, .main-container .header .icon-container svg {
+  width: 2.85rem;
+  height: 2.9rem;
+  -o-object-fit: contain;
+     object-fit: contain;
+  padding: 0.7rem 0.5rem;
+  margin: 1rem 0.5rem 0 0;
+  border-radius: 10px;
+  background-color: hsl(229, 57%, 11%);
+}
+.main-container .storage-info {
+  padding: 2rem 3rem 2rem 3rem;
+  background-color: hsl(228, 56%, 26%);
+  border-radius: 10px;
+  position: relative;
+}
+.main-container .storage-info .progress-container {
+  border-radius: 5px;
+  background-color: hsl(229, 57%, 11%);
+  position: relative;
+}
+.main-container .storage-info .progress-container .progress-bar {
+  border-radius: inherit;
+  margin: 1rem 0;
+  height: 12px;
+  width: 80%;
+  background-image: linear-gradient(to right, hsl(6, 100%, 80%), hsl(335, 100%, 65%));
+}
+.main-container .storage-info .progress-container .progress-indicator {
+  border-radius: 50%;
+  height: 12px;
+  width: 10px;
+  background-color: white;
+  position: absolute;
+  top: 0;
+  left: 75%;
+}
+.main-container .storage-info .storage-range {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+}
+.main-container .storage-info .remaining-storage {
+  background-color: white;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 1rem 1.2rem;
+}
+.main-container .storage-info .remaining-storage p {
+  color: hsl(229, 7%, 55%);
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+.main-container .storage-info .remaining-storage strong {
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: hsl(229, 57%, 11%);
+  margin-right: 0.5rem;
+}
+
+/* styling references in footer */
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media (min-width: 56rem) {
+  .main-container {
+    grid-template-columns: auto auto;
+    -moz-column-gap: 1rem;
+         column-gap: 1rem;
+  }
+  .main-container .header {
+    padding: 2rem 9rem 2rem 2.5rem;
+  }
+  .main-container .storage-info {
+    margin-top: auto;
+    height: 9rem;
+    width: 32rem;
+  }
+  .main-container .storage-info .remaining-storage {
+    top: -10%;
+    left: 75%;
+    transform: translate(-50%, -50%);
+    border-radius: 10px 10px 0 10px;
+  }
+  .main-container .storage-info .remaining-storage .triangle {
+    width: 0;
+    height: 0;
+    border-left: 30px solid transparent; /* Transparent left border */
+    border-bottom: 30px solid transparent; /* Transparent right border */
+    border-right: 30px solid white; /* Color and size of the triangle */
+    position: absolute;
+    top: 100%;
+    right: 0;
+  }
+  .main-container .storage-info .progress-container .progress-indicator {
+    left: 77.2%;
+  }
+}/*# sourceMappingURL=style.css.map */
