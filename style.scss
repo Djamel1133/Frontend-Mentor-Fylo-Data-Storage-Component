@@ -36,7 +36,8 @@ body {
   font-size: $fs-small;
   font-weight: $fs-small;
   text-align: center;
-  background-image: url(images/bg-mobile.png);
+  background-color: $Very-Dark-Blue;
+
   }  
 
 .main-container {
@@ -45,9 +46,13 @@ body {
   row-gap: 1rem;
   width: 100vw;
   height: 100vh;
+
   background-image: url(images/bg-mobile.png);
-  background-size: 100% 200%; ;
-  background-repeat: no-repeat;  
+  background-origin: border-box;
+  background-position-y: bottom; 
+  background-repeat: no-repeat;
+  background-size: 100% 50% ;
+
   color: $Pale-Blue;
 
  .header {

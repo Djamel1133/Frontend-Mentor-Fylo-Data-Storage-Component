@@ -21,7 +21,7 @@ body {
   font-size: 0.875rem;
   font-weight: 0.875rem;
   text-align: center;
-  background-image: url(images/bg-mobile.png);
+  background-color: hsl(229, 57%, 11%);
 }
 
 .main-container {
@@ -31,9 +31,10 @@ body {
   width: 100vw;
   height: 100vh;
   background-image: url(images/bg-mobile.png);
-  background-size: cover;
-  background-position: center center;
+  background-origin: border-box;
+  background-position-y: bottom;
   background-repeat: no-repeat;
+  background-size: 100% 50%;
   color: hsl(243, 100%, 93%);
 }
 .main-container .header {
