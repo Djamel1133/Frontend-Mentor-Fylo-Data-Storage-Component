@@ -31,10 +31,8 @@ body {
   width: 100vw;
   height: 100vh;
   background-image: url(images/bg-mobile.png);
-  background-origin: border-box;
-  background-position-y: bottom;
   background-repeat: no-repeat;
-  background-size: 100% 50%;
+  background-size: 100% 100%;
   color: hsl(243, 100%, 93%);
 }
 .main-container .header {
@@ -131,6 +129,8 @@ body {
 @media (min-width: 56rem) {
   .main-container {
     background-image: url(images/bg-desktop.png);
+    background-position-y: bottom;
+    background-size: 100% 50%;
     grid-template-columns: auto auto;
     -moz-column-gap: 1rem;
          column-gap: 1rem;

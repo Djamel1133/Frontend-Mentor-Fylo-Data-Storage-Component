@@ -48,11 +48,9 @@ body {
   height: 100vh;
 
   background-image: url(images/bg-mobile.png);
-  background-origin: border-box;
-  background-position-y: bottom; 
   background-repeat: no-repeat;
-  background-size: 100% 50% ;
-
+  background-size: 100% 100% ;
+ 
   color: $Pale-Blue;
 
  .header {
@@ -158,6 +156,9 @@ body {
 @media (min-width: 56rem) {
   .main-container {
     background-image: url(images/bg-desktop.png);
+    background-position-y: bottom; 
+    background-size: 100% 50% ;
+
     grid-template-columns: auto auto;
     column-gap: 1rem;
    .header {
